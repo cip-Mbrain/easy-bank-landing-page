@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* variables */
 :root {
@@ -11,8 +11,7 @@
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-very-light-grayish-blue: hsl(0, 0%, 98%);
   --clr-white: hsl(0, 0%, 100%);
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
+  --ff-primary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 4rem;
@@ -31,8 +30,8 @@
 }
 
 body {
-  font-family: var(--ff-secondary);
-  background: var(--clr-white);
+  font-family: var(--ff-primary);
+  background: var(--clr-very-light-grayish-blue);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -52,17 +51,16 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
+  font-weight: 400;
 }
 h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -107,11 +105,6 @@ p {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
-}
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
 }
 
 /* btn */
@@ -221,36 +214,49 @@ Navbar
 }
 
 .main-img-container {
+  min-height: 60vh;
   background: url(../images/bg-intro-mobile.svg) right/cover no-repeat;
   padding-bottom: 1.5rem;
 }
 
+.image-mockups {
+  max-width: 90vw;
+  margin: 0 auto;
+}
 .main-info {
   text-align: center;
 }
 
 .main-info h2 {
-  font-size: 3rem;
   color: var(--clr-dark-blue);
   margin-bottom: 1rem;
+  font-size: 3rem;
 }
 
 .main-info p {
   max-width: 25rem;
   margin: 0 auto;
   color: var(--clr-grayish-blue);
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 3rem;
   line-height: 2;
 }
 
 @media screen and (min-width: 769px) {
+  .main {
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+
   .main-center {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     place-items: center;
     grid-template-areas: 'a b';
+
+    margin: 0 auto;
+    max-width: var(--max-width);
   }
   .main-img-container {
     grid-area: b;
@@ -259,4 +265,16 @@ Navbar
   .main-info {
     grid-area: a;
   }
+  .main-img-container {
+    background: url(../images/bg-intro-desktop.svg) right/cover no-repeat;
+    padding-bottom: 1.5rem;
+  }
+
+  .main-info {
+    text-align: left;
+  }
+}
+
+.why-section {
+  background: var(--clr-grayish-blue);
 }
