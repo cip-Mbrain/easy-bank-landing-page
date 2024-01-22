@@ -133,7 +133,10 @@ Navbar
  */
 
 .navbar {
-  display: grid;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: var(--clr-white);
   padding: 2rem;
   min-height: 4rem;
@@ -208,5 +211,52 @@ Navbar
 
   .nav-links a:hover {
     color: var(--clr-dark-blue);
+  }
+}
+
+/* main section */
+
+.main {
+  padding-bottom: 5rem;
+}
+
+.main-img-container {
+  background: url(../images/bg-intro-mobile.svg) right/cover no-repeat;
+  padding-bottom: 1.5rem;
+}
+
+.main-info {
+  text-align: center;
+}
+
+.main-info h2 {
+  font-size: 3rem;
+  color: var(--clr-dark-blue);
+  margin-bottom: 1rem;
+}
+
+.main-info p {
+  max-width: 25rem;
+  margin: 0 auto;
+  color: var(--clr-grayish-blue);
+  font-weight: bold;
+  margin-bottom: 3rem;
+  line-height: 2;
+}
+
+@media screen and (min-width: 769px) {
+  .main-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    place-items: center;
+    grid-template-areas: 'a b';
+  }
+  .main-img-container {
+    grid-area: b;
+  }
+
+  .main-info {
+    grid-area: a;
   }
 }
