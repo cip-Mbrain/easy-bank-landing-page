@@ -6,6 +6,7 @@
   --clr-primary-light: hsl(220, 16%, 96%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-text: hsl(243, 13%, 27%);
+  --clr-text-light: hsl(233, 27%, 24%);
   --clr-bright-cyan: hsl(192, 70%, 51%);
   --clr-grayish-blue: hsl(233, 8%, 62%);
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
@@ -385,4 +386,9 @@ Navbar
   .latest-center {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* footer */
+.footer {
+  background: var(--clr-text-light);
 }
