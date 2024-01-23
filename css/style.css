@@ -42,10 +42,10 @@ ul {
 a {
   text-decoration: none;
 }
-/* img:not(.nav-logo) {
+.img {
   width: 100%;
   display: block;
-} */
+}
 
 h1,
 h2,
@@ -102,9 +102,9 @@ p {
 }
 
 .section-center {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: var(--max-width);
 }
 
 /* btn */
@@ -117,6 +117,15 @@ p {
   font-weight: bold;
   cursor: pointer;
   text-align: center;
+}
+
+.global-p {
+  max-width: 23rem;
+  margin: 0 auto;
+  color: var(--clr-grayish-blue);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  line-height: 2;
 }
 
 /* 
@@ -152,7 +161,6 @@ Navbar
 .nav-logo {
   font-size: 4rem;
   width: 13rem;
-  /* background: red; */
 }
 
 .nav-btn {
@@ -170,7 +178,7 @@ Navbar
 .nav-invite {
   display: none;
 }
-
+/* nav big screen */
 @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
@@ -233,16 +241,6 @@ Navbar
   font-size: 3rem;
 }
 
-/* global paragraph */
-.global-p {
-  max-width: 23rem;
-  margin: 0 auto;
-  color: var(--clr-grayish-blue);
-  font-weight: 500;
-  margin-bottom: 3rem;
-  line-height: 2;
-}
-
 @media screen and (min-width: 769px) {
   .main {
     margin: 0 auto;
@@ -275,6 +273,8 @@ Navbar
     text-align: left;
   }
 }
+
+/* why easybank section */
 
 .why-section {
   background: var(--clr-primary-light);
@@ -322,8 +322,6 @@ Navbar
   .why-center {
     display: grid;
     row-gap: 4rem;
-    width: 80vw;
-    margin: 0 auto;
   }
   .why-info h2 {
     text-align: left;
@@ -340,4 +338,12 @@ Navbar
   .why-article {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* latest section */
+
+.latest-title {
+  color: var(--clr-text);
+  text-align: center;
+  padding-bottom: 1.5rem;
 }
