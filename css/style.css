@@ -4,13 +4,13 @@
 :root {
   /* primary color */
   --clr-primary-light: hsl(220, 16%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
   --clr-text: hsl(243, 13%, 27%);
   --clr-bright-cyan: hsl(192, 70%, 51%);
-  /* neutral */
   --clr-grayish-blue: hsl(233, 8%, 62%);
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-very-light-grayish-blue: hsl(0, 0%, 98%);
-  --clr-white: hsl(0, 0%, 100%);
+
   --ff-primary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -31,7 +31,7 @@
 
 body {
   font-family: var(--ff-primary);
-  background: var(--clr-very-light-grayish-blue);
+  background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -71,29 +71,6 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
 }
 
 /* section */
@@ -144,6 +121,7 @@ Navbar
   min-height: 4rem;
   align-items: center;
   box-shadow: var(--dark-shadow);
+  z-index: 2;
 }
 
 .nav-center {
@@ -346,4 +324,65 @@ Navbar
   color: var(--clr-text);
   text-align: center;
   padding-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.latest-card {
+  background: var(--clr-very-light-grayish-blue);
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.latest-card:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+.latest-img {
+  height: 15rem;
+  object-fit: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.card-info {
+  padding: 2rem 2rem 0.5rem 2rem;
+}
+
+.card-info h3 {
+  text-transform: capitalize;
+}
+
+.card-info .card-p {
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  color: var(--clr-text);
+}
+
+.card-info p {
+  margin-left: 0;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .latest-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  .card-info {
+    padding-bottom: 0;
+  }
+  .latest-card {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .latest-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
