@@ -387,8 +387,3 @@ Navbar
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* footer */
-.footer {
-  background: var(--clr-text-light);
-}
