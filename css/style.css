@@ -389,3 +389,7 @@ Navbar
 }
 
 /* footer section */
+
+.footer {
+  background-color: var(--clr-dark-blue);
+}
